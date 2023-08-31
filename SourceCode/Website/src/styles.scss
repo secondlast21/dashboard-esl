@@ -3,9 +3,14 @@
 @import '~ng-pick-datetime-ex/assets/style/picker.min.css';
 @import '../node_modules/angular-calendar/css/angular-calendar.css';
 
+@font-face {
+  font-family: Poppins;
+  src: url(assets/fonts/poppins.ttf) format("truetype");
+}
+
 body {
   margin     : 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Poppins", "Helvetica Neue", sans-serif;
 }
 
 .m-right-10 {

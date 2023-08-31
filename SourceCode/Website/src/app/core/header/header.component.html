@@ -1,7 +1,7 @@
 <div class="topbar">
   <nav class="navbar navbar-expand-lg navbar-custom">
     <a routerLink="./" class="logo">
-      <span><img src="assets/images/logo.png" alt="logo-large" class="logo-lg"></span>
+      <span><img src="assets/images/logo_ipb.png" style="width: 50px; height: 50px; margin-left: 10px;" alt="logo-large"></span>
     </a>
     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,7 +9,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="list-unstyled topbar-nav ml-auto topbar-nav-right mb-0 float-right hide-when-toogle">
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
             <img class="contry-flag rounded" src="{{ language.flag }}" alt="language" /> {{ language.name }}
           </a>
@@ -20,15 +20,15 @@
               </li>
             </ng-container>
           </ul>
-        </li>
-        <li class="nav-item">
+        </li> -->
+        <!-- <li class="nav-item">
           <a class="nav-link dropdown">
             <span class="left-fa-icon">
               <i class="la la-user fs-19"></i>
             </span>
             {{appUserAuth.firstName}} {{appUserAuth.lastName}}
           </a>
-        </li>
+        </li> -->
         <li class="nav-item notification">
           <a class="nav-link cursor-pointer">
             <span class="mb-0 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
@@ -91,17 +91,30 @@
             </ul>
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link cursor-pointer" (click)="onMyProfile()">
             <span class="left-fa-icon"><i class="la la-id-card fs-19"></i></span>
             <span class="mb-0 ">{{'MY_PROFILE' | translate}}</span>
           </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="onLogout()">
-            <span class="left-fa-icon"><i class="la la-sign-out-alt fs-19"></i></span><span class="mb-0 ">{{'LOGOUT' |
-              translate}}</span>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+            <span class="left-fa-icon">
+              <i class="la la-user fs-19"></i>
+            </span>
+            {{appUserAuth.firstName}} {{appUserAuth.lastName}}
           </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item cursor-pointer" (click)="onMyProfile()">
+              <span class="left-fa-icon"><i class="la la-id-card fs-19"></i></span>
+              <span class="mb-0 ">{{'MY_PROFILE' | translate}}</span>
+              <!-- <span class="mb-0 ">My Profile</span> -->
+            </a>
+            <a class="dropdown-item" (click)="onLogout()">
+              <span class="left-fa-icon"><i class="la la-sign-out-alt fs-19"></i></span><span class="mb-0 ">{{'LOGOUT' |
+                translate}}</span>
+            </a>
+          </div>
         </li>
       </ul>
     </div>
